@@ -21,6 +21,7 @@ kind create cluster --image kindest/node:v1.23.1 --config ./kind/prometheus-conf
 ### Install robo-shop
 
 ```bash
+kubectl create ns robot-shop
 helm install robot-shop --namespace robot-shop ./robot-shop/helm
 ```
 
