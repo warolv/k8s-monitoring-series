@@ -39,11 +39,16 @@ EOF
 ```
 
 ## Monitoring with k8s Posts
-1.
+1. kube prometheus stack: install and overview of useful alerts and dashboards
 
-2.
+2. Prometheus Operator: Scrape metrics from your application
+    ServiceMonitor
+    PodMonitor
+    ScrapeConfig 
+    ProbeMonitor
 
-3.
+3. Prometheus Operator: Create alerts for your application  
+   Prometheus Rule CRD
 
 4.
 
