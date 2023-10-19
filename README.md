@@ -2,7 +2,7 @@
 
 ![monitoring-k8s](images/prometheus-operator/0.png)
 
-  * Prometheus Operator
+  * Prometheus Operator (ServiceMonitor | PodMonitor | ScrapeConfig | ProbeMonitor | PrometheusRule)
   * Grafana
   * Alert Manager
   * PushGateway
@@ -13,19 +13,26 @@
 ## Prerequisite
 
 ### Create kind cluster
+https://kind.sigs.k8s.io/
 
 ```bash
 kind create cluster --image kindest/node:v1.23.1 --config ./kind/prometheus-config.yaml
 ```
 
-### Install robo-shop
+### Install robot-shop
+
+https://github.com/instana/robot-shop
+
+'robot-shop' is a sample microservice application which will be installed to kind k8s cluster and monitored by kube-prometeus-stack 
 
 ```bash
 kubectl create ns robot-shop
 helm install robot-shop --namespace robot-shop ./robot-shop/helm
 ```
 
-### Install kube-prometeus-stack (prometheus operator)
+> "In this version I am using mongo-db image with tag 2.0.0 (latest version didn't worked with kind) and LoadBalancer type disabled for 'web-service'"
+
+### Install kube-prometeus-stack (prometheus operator) to kind k8s cluster
 
 ```bash
 helm install --wait --timeout 15m \
@@ -38,17 +45,21 @@ kubeEtcd:
 EOF
 ```
 
-## Monitoring with k8s Posts
-1. kube prometheus stack: install and overview of useful alerts and dashboards
+## Monitoring with k8s and open source series
 
-2. Prometheus Operator: Scrape metrics from your application
-    ServiceMonitor
-    PodMonitor
-    ScrapeConfig 
-    ProbeMonitor
+### 1. [kube prometheus stack: install and overview of useful alerts and dashboards](kube-prometheus-stack-review.md)
 
-3. Prometheus Operator: Create alerts for your application  
-   Prometheus Rule CRD
+### 2. [Prometheus Operator: Scrape metrics from your application](prometheus-operator-metrics.md)
+  
+  Prometheus Operator CRDs:
+  * ServiceMonitor
+  * PodMonitor
+  * ScrapeConfig 
+  * ProbeMonitor
+
+### 3. [Prometheus Operator: Create alerts for your application ](prometheus-operator-alerts.md)
+  Prometheus Operator CRDs:
+  * PrometheusRule
 
 4.
 
