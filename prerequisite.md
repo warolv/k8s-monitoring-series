@@ -1,15 +1,3 @@
-# Monitoring with Kubernetes series
-
-![monitoring-k8s](images/prometheus-operator/0.png)
-
-  * Prometheus Operator (ServiceMonitor | PodMonitor | ScrapeConfig | ProbeMonitor | PrometheusRule)
-  * Grafana
-  * Alert Manager
-  * PushGateway
-  * Thanos
-  * Loki
-
-
 ## Prerequisite
 
 ### Create kind cluster
@@ -45,19 +33,3 @@ kubeEtcd:
     targetPort: 2381
 EOF
 ```
-
-## Monitoring with k8s and open source series
-
-### 1. [kube prometheus stack: install and overview of useful alerts and dashboards](kube-prometheus-stack-review.md)
-
-### 2. [Prometheus Operator: Scrape metrics from your application](prometheus-operator-metrics.md)
-  
-  Prometheus Operator CRDs:
-  * ServiceMonitor
-  * PodMonitor
-  * ScrapeConfig 
-  * ProbeMonitor
-
-### 3. [Prometheus Operator: Create alerts for your application ](prometheus-operator-alerts.md)
-  Prometheus Operator CRDs:
-  * PrometheusRule
