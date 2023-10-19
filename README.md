@@ -1,6 +1,6 @@
 # Monitoring with Kubernetes series
 
-![monitoring-k8s](images/prometheus-operator/0.png)
+![monitoring-k8s](images/k8s-monitoring.png)
 
   * Prometheus Operator (ServiceMonitor | PodMonitor | ScrapeConfig | ProbeMonitor | PrometheusRule)
   * Grafana
