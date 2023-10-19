@@ -1,4 +1,4 @@
-# Monitoring with Kubernetes series
+# Monitoring with Kubernetes and Open Source series
 
 ![monitoring-k8s](images/k8s-monitoring.png)
 
