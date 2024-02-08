@@ -58,6 +58,18 @@ EOF
   * ScrapeConfig 
   * ProbeMonitor
 
-### 3. [Prometheus Operator: Create alerts for your application ](prometheus-operator-alerts.md)
+### 3. [Prometheus Operator: Create alerts for your application](prometheus-operator-alerts.md)
   Prometheus Operator CRDs:
   * PrometheusRule
+
+### 4. [Useful Alert Manager templates with buttons](alert-manager-templates.md)
+  
+
+### 5. [Using PushGateway](pushgateway.md)
+  
+
+### 6. [Extending Prometheus with Thanos](thanos.md)
+ 
+
+### 7. [Using Loki for Logs ](loki.md)
+  
